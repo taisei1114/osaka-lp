@@ -4,7 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YOASOBI関西navi｜関西の風俗・メンズエステ・体験記事情報</title>
-  <meta name="description" content="YOASOBI関西naviは、関西の夜の情報を体験談を通して日々配信するまとめLPです。大阪・兵庫・京都の出勤情報、AV女優在籍速報、注目キャスト情報からワクスト記事へ誘導します。" />
+  <meta name="description" content="YOASOBI関西naviは、関西の夜の情報を体験談を通して日々配信するまとめLPです。AV女優在籍記事ランキング、風俗最新記事、メンズエステ最新記事からワクスト記事へ誘導します。" />
+  <link rel="canonical" href="https://taisei1114.github.io/osaka-lp/" />
+  <meta property="og:title" content="YOASOBI関西navi｜関西の風俗・メンズエステ・体験記事情報" />
+  <meta property="og:description" content="関西の夜の情報を体験談を通して日々配信中。AV女優在籍記事ランキング、風俗最新記事、メンズエステ最新記事をまとめてチェック。" />
+  <!-- SNS共有画像は後から assets/images/ogp.jpg をアップロードして差し替えてください -->
+  <meta property="og:image" content="https://taisei1114.github.io/osaka-lp/assets/images/ogp.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://taisei1114.github.io/osaka-lp/" />
+  <meta name="twitter:card" content="summary_large_image" />
   <style>
     /*
       =========================================================
@@ -19,22 +27,24 @@
       --pink: #ff1688;
       --pink-2: #ff5eb7;
       --deep-pink: #d90073;
-      --soft-pink: #ffd5e8;
-      --pale-pink: #fff1f8;
+      --soft-pink: #130914;
+      --pale-pink: #09050b;
       --yellow: #fff04f;
       --black: #171117;
-      --text: #1d171b;
-      --muted: #75636d;
-      --line: #ff8cc8;
-      --card: #ffffff;
+      --gold: #d8b46a;
+      --gold-2: #fff0a8;
+      --text: #f7edf4;
+      --muted: #c8aeba;
+      --line: #3a2432;
+      --card: #151018;
       --radius: 8px;
       --max: 760px;
       /*
         ヒーロー背景画像の差し替え場所です。
-        今は安全な抽象ポートレート背景をCSS内に埋め込んでいます。
-        実画像に差し替える場合は、下を url("hero-bg.jpg") に変更し、
-        index.html と同じ場所に hero-bg.jpg を置いてください。
+        assets/images/hero.jpg をアップロードすると、その画像が優先表示されます。
+        画像がない場合でも、下の安全な抽象背景が表示されるのでLPは壊れません。
       */
+      --hero-photo: url("https://assets.st-note.com/production/uploads/images/234423117/rectangle_large_type_2_98ed6072437af07f0f8cf37e343c6647.jpeg?width=1280");
       --hero-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 620'%3E%3Crect width='1200' height='620' fill='%23ff78bd'/%3E%3Cg opacity='.32'%3E%3Crect x='-20' y='45' width='300' height='170' rx='12' fill='%23fff' transform='rotate(-10 130 130)'/%3E%3Crect x='270' y='20' width='285' height='175' rx='12' fill='%23fff' transform='rotate(7 410 100)'/%3E%3Crect x='620' y='35' width='290' height='175' rx='12' fill='%23fff' transform='rotate(-8 750 120)'/%3E%3Crect x='910' y='70' width='270' height='165' rx='12' fill='%23fff' transform='rotate(9 1030 150)'/%3E%3Crect x='100' y='390' width='280' height='165' rx='12' fill='%23fff' transform='rotate(8 210 470)'/%3E%3Crect x='480' y='380' width='285' height='170' rx='12' fill='%23fff' transform='rotate(-7 620 460)'/%3E%3Crect x='820' y='370' width='300' height='175' rx='12' fill='%23fff' transform='rotate(7 960 455)'/%3E%3C/g%3E%3Cg opacity='.58'%3E%3Cg transform='translate(95 95) rotate(-9)'%3E%3Ccircle cx='70' cy='54' r='46' fill='%23ffc1df'/%3E%3Cpath d='M24 120 C40 88 105 88 126 120 L126 150 L24 150 Z' fill='%23d90073' opacity='.42'/%3E%3Cpath d='M38 52 C48 8 118 16 120 64 C96 42 65 42 38 52 Z' fill='%2375144e' opacity='.72'/%3E%3Ccircle cx='55' cy='58' r='4' fill='%23500b35'/%3E%3Ccircle cx='88' cy='58' r='4' fill='%23500b35'/%3E%3Cpath d='M58 82 C72 92 86 89 96 80' stroke='%23500b35' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/g%3E%3Cg transform='translate(720 78) rotate(8)'%3E%3Ccircle cx='70' cy='54' r='46' fill='%23ffd1e8'/%3E%3Cpath d='M24 120 C40 88 105 88 126 120 L126 150 L24 150 Z' fill='%23ff1688' opacity='.36'/%3E%3Cpath d='M34 48 C48 4 122 12 126 68 C98 35 62 38 34 48 Z' fill='%238b1758' opacity='.7'/%3E%3Ccircle cx='55' cy='58' r='4' fill='%23500b35'/%3E%3Ccircle cx='90' cy='58' r='4' fill='%23500b35'/%3E%3Cpath d='M58 82 C72 92 88 89 98 80' stroke='%23500b35' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/g%3E%3Cg transform='translate(245 395) rotate(7)'%3E%3Ccircle cx='70' cy='54' r='46' fill='%23ffc8e3'/%3E%3Cpath d='M24 120 C40 88 105 88 126 120 L126 150 L24 150 Z' fill='%23d90073' opacity='.36'/%3E%3Cpath d='M36 45 C58 5 116 22 120 68 C94 42 65 40 36 45 Z' fill='%236b1245' opacity='.7'/%3E%3Ccircle cx='55' cy='58' r='4' fill='%23500b35'/%3E%3Ccircle cx='90' cy='58' r='4' fill='%23500b35'/%3E%3Cpath d='M58 82 C72 92 88 89 98 80' stroke='%23500b35' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/g%3E%3Cg transform='translate(900 380) rotate(-8)'%3E%3Ccircle cx='70' cy='54' r='46' fill='%23ffd4ea'/%3E%3Cpath d='M24 120 C40 88 105 88 126 120 L126 150 L24 150 Z' fill='%23ff1688' opacity='.34'/%3E%3Cpath d='M34 48 C48 4 122 12 126 68 C98 35 62 38 34 48 Z' fill='%238b1758' opacity='.68'/%3E%3Ccircle cx='55' cy='58' r='4' fill='%23500b35'/%3E%3Ccircle cx='90' cy='58' r='4' fill='%23500b35'/%3E%3Cpath d='M58 82 C72 92 88 89 98 80' stroke='%23500b35' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/g%3E%3C/g%3E%3Cg opacity='.45' stroke='%23fff' stroke-width='4'%3E%3Cpath d='M0 245 C210 160 360 330 560 235 S930 190 1200 145' fill='none'/%3E%3Cpath d='M-20 520 C210 410 390 540 590 430 S930 380 1220 470' fill='none'/%3E%3Cpath d='M100 20 L1140 610'/%3E%3Cpath d='M-30 610 L980 0'/%3E%3C/g%3E%3Cg fill='%23d90073' opacity='.25'%3E%3Ccircle cx='430' cy='112' r='38'/%3E%3Ccircle cx='1050' cy='305' r='54'/%3E%3Ccircle cx='565' cy='500' r='36'/%3E%3C/g%3E%3C/svg%3E");
     }
 
@@ -49,7 +59,10 @@
     body {
       margin: 0;
       color: var(--text);
-      background: var(--soft-pink);
+      background:
+        radial-gradient(circle at 16% 0%, rgba(255, 22, 136, 0.22), transparent 28%),
+        radial-gradient(circle at 88% 10%, rgba(216, 180, 106, 0.16), transparent 26%),
+        #050306;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
     }
@@ -63,13 +76,13 @@
       width: min(100%, var(--max));
       margin: 0 auto;
       background: var(--pale-pink);
-      box-shadow: 0 0 0 1px rgba(255, 22, 136, 0.12);
+      box-shadow: 0 0 0 1px rgba(216, 180, 106, 0.16), 0 18px 60px rgba(0, 0, 0, 0.42);
       min-height: 100vh;
     }
 
     .top-header {
-      background: #fff;
-      border-bottom: 3px solid var(--pink);
+      background: linear-gradient(180deg, #171018, #0b070d);
+      border-bottom: 1px solid rgba(216, 180, 106, 0.38);
     }
 
     .top-header-inner {
@@ -89,8 +102,8 @@
       align-items: center;
       gap: 5px;
       padding: 2px 6px;
-      color: #fff;
-      background: var(--pink);
+      color: #171117;
+      background: var(--gold);
       font-size: 11px;
       line-height: 1;
       font-weight: 950;
@@ -99,16 +112,17 @@
     .site-name {
       display: block;
       margin-top: 5px;
-      color: var(--pink);
+      color: #fff;
       font-size: 24px;
       line-height: 0.95;
       font-weight: 950;
       letter-spacing: 0;
+      text-shadow: 0 2px 12px rgba(255, 22, 136, 0.55);
     }
 
     .site-sub {
       margin: 5px 0 0;
-      color: var(--black);
+      color: var(--muted);
       font-size: 12px;
       font-weight: 800;
     }
@@ -125,16 +139,16 @@
       justify-content: center;
       padding: 9px 16px;
       border-radius: 6px;
-      color: #fff;
-      background: var(--pink);
+      color: #171117;
+      background: linear-gradient(90deg, var(--gold), var(--gold-2));
       font-weight: 900;
       white-space: nowrap;
     }
 
     .breadcrumb {
       padding: 7px 16px;
-      background: #fff;
-      border-bottom: 1px solid #ffd2e8;
+      background: #0d090f;
+      border-bottom: 1px solid rgba(216, 180, 106, 0.2);
       color: var(--muted);
       font-size: 12px;
       font-weight: 700;
@@ -143,53 +157,94 @@
     .hero {
       position: relative;
       overflow: hidden;
-      min-height: 270px;
+      min-height: 300px;
       display: grid;
-      place-items: center;
-      padding: 22px 14px;
+      align-items: end;
+      padding: 24px 14px 26px;
       background:
-        linear-gradient(180deg, rgba(255, 22, 136, 0.50), rgba(255, 22, 136, 0.84)),
+        radial-gradient(circle at 20% 15%, rgba(255, 240, 79, 0.28), transparent 26%),
+        linear-gradient(180deg, rgba(23, 17, 23, 0.08), rgba(23, 17, 23, 0.70)),
+        linear-gradient(135deg, rgba(255, 22, 136, 0.86), rgba(217, 0, 115, 0.72)),
+        var(--hero-photo),
         var(--hero-bg-image),
         linear-gradient(135deg, #ff1688, #ff85c5 55%, #fff04f);
       background-size: cover;
       background-position: center;
     }
 
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(115deg, transparent 0 44%, rgba(255, 255, 255, 0.18) 45% 47%, transparent 48%),
+        repeating-linear-gradient(-12deg, rgba(255, 255, 255, 0.1) 0 2px, transparent 2px 12px);
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
     .hero-card {
+      position: relative;
       width: 100%;
-      padding: 18px 12px;
-      background: rgba(255, 255, 255, 0.82);
-      backdrop-filter: blur(2px);
-      text-align: center;
-      box-shadow: 0 12px 32px rgba(217, 0, 115, 0.22);
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 15px 14px 17px;
+      border-left: 5px solid var(--yellow);
+      background: linear-gradient(90deg, rgba(7, 2, 10, 0.88), rgba(7, 2, 10, 0.62));
+      text-align: left;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.34);
     }
 
     .hero-kicker {
       display: inline-flex;
-      padding: 5px 8px;
-      color: var(--black);
-      background: var(--yellow);
-      font-size: 12px;
+      margin-bottom: 8px;
+      padding: 4px 9px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      color: var(--yellow);
+      background: rgba(255, 22, 136, 0.58);
+      font-size: 11px;
       font-weight: 950;
     }
 
     h1 {
-      margin: 10px 0 8px;
-      color: var(--pink);
-      font-size: clamp(36px, 13vw, 70px);
-      line-height: 0.92;
+      margin: 0 0 8px;
+      color: #fff;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", "HGS明朝E", "MS PMincho", serif;
+      font-size: clamp(37px, 13vw, 68px);
+      line-height: 1.04;
       font-weight: 950;
       letter-spacing: 0;
+      font-style: italic;
       text-shadow:
-        0 2px 0 #fff,
-        0 5px 0 rgba(0, 0, 0, 0.12);
+        0 3px 0 var(--pink),
+        0 7px 18px rgba(0, 0, 0, 0.44);
+      transform: skewX(-4deg);
+      transform-origin: left center;
     }
 
     .hero-lead {
       margin: 0;
-      color: var(--black);
-      font-size: 16px;
+      color: #fff;
+      font-size: 14px;
       font-weight: 900;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      padding: 4px 8px;
+      border-radius: 999px;
+      color: var(--black);
+      background: var(--yellow);
+      font-size: 11px;
+      font-weight: 950;
     }
 
     .filter-band {
@@ -205,26 +260,145 @@
       font-weight: 950;
     }
 
-    .region-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
+    .content {
+      padding: 14px 12px 30px;
+      background:
+        linear-gradient(180deg, rgba(255, 22, 136, 0.05), transparent 170px),
+        #09050b;
     }
 
-    .region-button {
-      min-height: 42px;
-      display: grid;
-      place-items: center;
-      border: 2px solid var(--pink);
-      border-radius: 5px;
-      background: #fff;
-      color: var(--black);
-      font-size: 14px;
+    .top-slider {
+      overflow: hidden;
+      padding: 12px 0 14px;
+      background: #07020a;
+      border-top: 1px solid rgba(216, 180, 106, 0.45);
+      border-bottom: 1px solid rgba(216, 180, 106, 0.45);
+    }
+
+    .top-slider-heading {
+      margin: 0 12px 9px;
+      color: #fff;
+      font-size: 15px;
+      line-height: 1.25;
       font-weight: 950;
     }
 
-    .content {
-      padding: 14px 12px 30px;
+    .top-slider-heading span {
+      color: var(--gold-2);
+    }
+
+    .slider-window {
+      overflow: hidden;
+    }
+
+    .slider-track {
+      display: flex;
+      width: max-content;
+      gap: 10px;
+      padding: 0 10px;
+      animation: slideArticles 34s linear infinite;
+    }
+
+    .slider-window:hover .slider-track {
+      animation-play-state: paused;
+    }
+
+    .slider-card {
+      width: 190px;
+      flex: 0 0 auto;
+      overflow: hidden;
+      border-radius: 6px;
+      color: #fff;
+      background: #120d14;
+      border: 1px solid rgba(216, 180, 106, 0.26);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.42);
+    }
+
+    .slider-image {
+      min-height: 124px;
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.22)),
+        linear-gradient(135deg, #ff1688, #ff75bd 58%, #fff04f);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slider-body {
+      padding: 8px;
+    }
+
+    .slider-title {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.35;
+      font-weight: 900;
+    }
+
+    .ad-section {
+      padding: 14px 12px;
+      background: #09050b;
+      border-bottom: 1px solid rgba(216, 180, 106, 0.28);
+      text-align: center;
+    }
+
+    .ad-label {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .ad-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .ad-frame {
+      width: min(100%, 320px);
+      margin: 0 auto;
+      padding: 8px;
+      border: 1px solid rgba(216, 180, 106, 0.28);
+      border-radius: 8px;
+      background: #151018;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+    }
+
+    .ad-frame iframe {
+      display: block;
+      width: 300px;
+      max-width: 100%;
+      height: 250px;
+      margin: 0 auto;
+      border: 0;
+    }
+
+    .ad-link {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .ad-link img {
+      display: block;
+      width: 300px;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto 6px;
+      border: 0;
+    }
+
+    @keyframes slideArticles {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     .section {
@@ -240,12 +414,12 @@
       padding: 9px 10px 9px 13px;
       border-left: 0;
       border-radius: 6px;
-      background: linear-gradient(90deg, var(--pink), var(--pink-2));
+      background: linear-gradient(90deg, #1a1119, #d90073 58%, #ff1688);
       color: #fff;
       font-size: 19px;
       line-height: 1.25;
       font-weight: 950;
-      box-shadow: 0 4px 0 rgba(217, 0, 115, 0.24);
+      box-shadow: 0 4px 0 rgba(216, 180, 106, 0.26);
       text-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
     }
 
@@ -253,7 +427,7 @@
       content: "YOASOBI PICK UP";
       display: block;
       margin-bottom: 2px;
-      color: var(--yellow);
+      color: var(--gold-2);
       font-size: 10px;
       line-height: 1;
       font-weight: 950;
@@ -265,6 +439,13 @@
       color: var(--muted);
       font-size: 13px;
       font-weight: 700;
+    }
+
+    .updated-date {
+      display: inline-flex;
+      margin-left: 4px;
+      color: var(--gold-2);
+      font-weight: 950;
     }
 
     .card-list {
@@ -290,10 +471,10 @@
 
     .card {
       overflow: hidden;
-      border: 1px solid #ffc3df;
+      border: 1px solid rgba(216, 180, 106, 0.22);
       border-radius: var(--radius);
       background: var(--card);
-      box-shadow: 0 10px 24px rgba(217, 0, 115, 0.12);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
     }
 
     .thumb {
@@ -321,8 +502,8 @@
       justify-self: start;
       padding: 4px 7px;
       border-radius: 999px;
-      color: var(--black);
-      background: var(--yellow);
+      color: #171117;
+      background: linear-gradient(90deg, var(--gold), var(--gold-2));
       font-size: 11px;
       font-weight: 950;
     }
@@ -337,15 +518,15 @@
 
     .article-mini-card {
       overflow: hidden;
-      border: 1px solid #d7d7d7;
+      border: 1px solid rgba(216, 180, 106, 0.26);
       border-radius: 6px;
-      background: #fff;
-      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.12);
+      background: #151018;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
     }
 
     .article-mini-card .article-thumb {
       min-height: 132px;
-      border-bottom: 1px solid #efefef;
+      border-bottom: 1px solid rgba(216, 180, 106, 0.18);
     }
 
     .article-mini-body {
@@ -354,25 +535,110 @@
 
     .article-category {
       margin: 0 0 2px;
-      color: #286eea;
+      color: var(--gold-2);
       font-size: 12px;
       font-weight: 800;
     }
 
     .article-mini-title {
       margin: 0;
-      color: #222;
+      color: #fff;
       font-size: 14px;
       line-height: 1.35;
       font-weight: 850;
+    }
+
+    .article-mini-copy {
+      margin: 6px 0 9px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 650;
+    }
+
+    .mini-button {
+      min-height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 7px 9px;
+      border-radius: 5px;
+      color: #fff;
+      background: linear-gradient(90deg, var(--deep-pink), var(--pink));
+      font-size: 12px;
+      font-weight: 950;
+    }
+
+    .ranking-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .ranking-card {
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      overflow: hidden;
+      border: 1px solid rgba(216, 180, 106, 0.25);
+      border-radius: var(--radius);
+      background: #151018;
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
+    }
+
+    .ranking-image {
+      min-height: 132px;
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.35)),
+        linear-gradient(135deg, #ff1688, #ff75bd 58%, #fff04f);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .rank-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 7px;
+      padding: 5px 12px;
+      border: 2px solid var(--gold);
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(90deg, #171117, #8e064f 58%, #d8b46a);
+      font-size: 13px;
+      font-weight: 950;
+      text-align: center;
+      line-height: 1;
+      box-shadow: 0 4px 0 rgba(216, 180, 106, 0.22);
+    }
+
+    .ranking-body {
+      min-width: 0;
+      padding: 10px;
+    }
+
+    .ranking-title {
+      margin: 0 0 6px;
+      color: #fff;
+      font-size: 15px;
+      line-height: 1.35;
+      font-weight: 950;
+    }
+
+    .ranking-copy {
+      margin: 0 0 9px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 650;
     }
 
     .label {
       display: inline-flex;
       padding: 4px 8px;
       border-radius: 999px;
-      color: var(--black);
-      background: var(--yellow);
+      color: #171117;
+      background: linear-gradient(90deg, var(--gold), var(--gold-2));
       font-size: 12px;
       font-weight: 950;
     }
@@ -397,7 +663,7 @@
 
     .meta {
       margin: 0 0 8px;
-      color: var(--deep-pink);
+      color: var(--gold-2);
       font-size: 12px;
       font-weight: 950;
     }
@@ -411,16 +677,16 @@
       padding: 9px 12px;
       border-radius: 6px;
       color: #fff;
-      background: var(--pink);
+      background: linear-gradient(90deg, var(--deep-pink), var(--pink));
       font-weight: 950;
       box-shadow: 0 8px 18px rgba(255, 22, 136, 0.2);
     }
 
     .info-row {
       padding: 10px;
-      border: 1px solid #ffc3df;
+      border: 1px solid rgba(216, 180, 106, 0.25);
       border-radius: var(--radius);
-      background: #fff;
+      background: #151018;
     }
 
     .info-top {
@@ -458,8 +724,8 @@
       padding: 7px 12px;
       border: 2px solid var(--pink);
       border-radius: 999px;
-      background: #fff;
-      color: var(--black);
+      background: #151018;
+      color: #fff;
       font-weight: 950;
       white-space: nowrap;
       cursor: pointer;
@@ -475,6 +741,8 @@
       color: var(--muted);
       font-size: 13px;
       font-weight: 650;
+      border-color: rgba(216, 180, 106, 0.25);
+      background: #151018;
     }
 
     .notice p {
@@ -488,8 +756,8 @@
     .footer {
       padding: 18px 14px 26px;
       color: var(--muted);
-      background: #fff;
-      border-top: 2px solid var(--pink);
+      background: #0d090f;
+      border-top: 1px solid rgba(216, 180, 106, 0.34);
       text-align: center;
       font-size: 12px;
       font-weight: 700;
@@ -513,9 +781,9 @@
     .age-box {
       width: min(100%, 420px);
       padding: 22px 18px;
-      border: 2px solid var(--pink);
+      border: 2px solid var(--gold);
       border-radius: 8px;
-      background: #fff;
+      background: #151018;
       text-align: center;
       box-shadow: 0 18px 46px rgba(0, 0, 0, 0.34);
     }
@@ -524,15 +792,15 @@
       display: inline-flex;
       margin-bottom: 10px;
       padding: 4px 8px;
-      color: #fff;
-      background: var(--pink);
+      color: #171117;
+      background: linear-gradient(90deg, var(--gold), var(--gold-2));
       font-size: 12px;
       font-weight: 950;
     }
 
     .age-title {
       margin: 0 0 8px;
-      color: var(--black);
+      color: #fff;
       font-size: 22px;
       line-height: 1.25;
       font-weight: 950;
@@ -560,12 +828,12 @@
 
     .age-button.primary {
       color: #fff;
-      background: var(--pink);
+      background: linear-gradient(90deg, var(--deep-pink), var(--pink));
     }
 
     .age-button.secondary {
-      color: var(--black);
-      background: #eeeeee;
+      color: #fff;
+      background: #2a2029;
     }
 
     @media (min-width: 720px) {
@@ -583,15 +851,30 @@
       }
 
       .hero {
-        min-height: 320px;
-      }
-
-      .region-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        min-height: 340px;
       }
 
       .horizontal-strip {
         grid-auto-columns: minmax(230px, 32%);
+      }
+
+      .slider-card {
+        width: 230px;
+      }
+
+      .slider-image {
+        min-height: 150px;
+      }
+
+      .ranking-card {
+        grid-template-columns: 150px minmax(0, 1fr);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .slider-track {
+        animation: none;
+        overflow-x: auto;
       }
     }
   </style>
@@ -621,41 +904,62 @@
           <a class="header-button" href="#latest">最新記事</a>
         </div>
       </div>
-      <div class="breadcrumb">YOASOBI関西navi ＞ 大人の体験談</div>
+      <div class="breadcrumb">YOASOBI関西navi ＞ 体験談まとめ</div>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-card">
           <span class="hero-kicker">EXPERIENCE REPORT</span>
-          <h1 id="hero-title">大人の体験談</h1>
-          <p class="hero-lead">詳細レビュー・エロい体験談は記事内で公開中</p>
+          <h1 id="hero-title">体験談まとめ</h1>
+          <p class="hero-lead">関西の夜遊び情報を、読みやすい記事導線でチェック</p>
+          <div class="hero-tags" aria-label="掲載ジャンル">
+            <span class="hero-tag">AV女優在籍</span>
+            <span class="hero-tag">風俗記事</span>
+            <span class="hero-tag">メンズエステ</span>
+          </div>
         </div>
       </section>
 
-      <section class="filter-band" aria-labelledby="region-title">
-        <h2 id="region-title" class="filter-title">地域で絞り込む</h2>
-        <div id="region-grid" class="region-grid"></div>
+      <section class="top-slider" aria-label="注目記事スライダー">
+        <h2 class="top-slider-heading"><span>注目記事</span>を横にチェック</h2>
+        <div class="slider-window">
+          <div id="top-slider-track" class="slider-track"></div>
+        </div>
+      </section>
+
+      <section class="ad-section" aria-label="広告">
+        <p class="ad-label">ADVERTISEMENT</p>
+        <div class="ad-grid">
+          <div class="ad-frame">
+            <iframe src="https://gallerieshub.com/index11.html?affid=232970" width="300" height="250" frameborder="no" scrolling="no" title="広告"></iframe>
+          </div>
+          <div class="ad-frame">
+            <a class="ad-link" href="https://clear-tv.com/Click2/1018004-18-232970" target="_blank" rel="noopener">
+              <img src="https://pixelarchivenow.com/image/1pondo/sm/1456001.jpg" alt="広告" />
+              <span>かわいい女性や綺麗な女性が、本気でSEXする姿を無修正で。</span>
+            </a>
+          </div>
+        </div>
       </section>
 
       <div class="content">
+        <section id="actress-ranking" class="section" aria-labelledby="actress-ranking-title">
+          <h2 id="actress-ranking-title" class="section-title">AV女優在籍記事ランキング</h2>
+          <p class="section-note">注目度の高い在籍記事を5位まで掲載。<span id="actress-ranking-updated" class="updated-date"></span></p>
+          <div id="actress-ranking-list" class="ranking-list"></div>
+        </section>
+
         <section id="latest" class="section" aria-labelledby="latest-title">
-          <h2 id="latest-title" class="section-title">最新記事</h2>
-          <p class="section-note">最新記事随時更新中</p>
+          <h2 id="latest-title" class="section-title">風俗地域まとめ</h2>
+          <p class="section-note">SNSから来た人が最初に見る入口です。<span id="latest-updated" class="updated-date"></span></p>
           <div id="latest-list" class="horizontal-strip"></div>
         </section>
 
-        <section id="schedule" class="section" aria-labelledby="schedule-title">
-          <h2 id="schedule-title" class="section-title">今週の出勤情報</h2>
-          <p class="section-note">気になるあの子の出勤日が確認可能</p>
-          <div id="schedule-tabs" class="tabs"></div>
-          <div id="schedule-list" class="card-list"></div>
-        </section>
-
-        <section id="actress" class="section" aria-labelledby="actress-title">
-          <h2 id="actress-title" class="section-title">AV女優在籍情報</h2>
-          <p class="section-note">最新追加順。気になる在籍情報</p>
-          <div id="actress-list" class="horizontal-strip"></div>
+        <section id="mens-esthe" class="section" aria-labelledby="mens-esthe-title">
+          <h2 id="mens-esthe-title" class="section-title">メンエス地域まとめ</h2>
+          <p class="section-note">気になる地域のメンズエステ記事をチェック。<span id="mens-esthe-updated" class="updated-date"></span></p>
+          <div id="mens-esthe-list" class="horizontal-strip"></div>
         </section>
 
         <section class="section" aria-labelledby="notice-title">
@@ -683,62 +987,158 @@
       将来GASやCSVから自動更新する場合も、この配列を置き換える形にすると管理しやすいです。
     */
 
-    const wakustTopUrl = "https://wakust.com/";
+    const lastUpdated = "2026年6月12日";
 
-    const regions = [
-      { name: "大阪", target: "#schedule" },
-      { name: "兵庫", target: "#schedule" },
-      { name: "京都", target: "#schedule" }
+    /*
+      横スクロール画像スライダーの編集場所です。
+      - imageUrl: 画像URL
+      - title: 画像下に表示するタイトル
+      - url: クリック時のリンク先
+      画像を増やす場合は、この配列に同じ形で追加してください。
+    */
+    const topSliderArticles = [
+      {
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/05/756789-1024x576.jpg",
+        title: "顔面最高!さらに国宝級の体とNN",
+        url: "https://wakust.com/taisei1114/1721149/"
+      },
+      {
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/05/343348-1024x576.jpg",
+        title: "ドスケベランカーにガン突き中出し",
+        url: "https://wakust.com/taisei1114/1720065/"
+      },
+      {
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/06/534174-1024x576.jpg",
+        title: "エロ顔のモデル系美女と2回戦で大量射精",
+        url: "https://wakust.com/taisei1114/1737827/"
+      },
+      {
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/05/656508-1024x576.jpg",
+        title: "スレンダー名器の発情ギャル",
+        url: "https://wakust.com/taisei1114/1719322/"
+      },
+      {
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/05/890354-1024x576.jpg",
+        title: "激美乳AV女優と濃厚SEX、顔面騎乗位で唾液たっぷりクンニ",
+        url: "https://wakust.com/taisei1114/1721627/"
+      }
     ];
 
+    /*
+      最新記事の編集場所です。
+      - area: 地域
+      - thumbLabel: サムネ上の小さいラベル
+      - thumbText: サムネ内の大きい文言
+      - title: 記事タイトル
+      - copy: 短い説明文
+      - url: ワクストの個別記事URL
+    */
     const latestArticles = [
       {
         area: "大阪",
         thumbLabel: "大阪",
         thumbText: "予約前に読まれている体験談",
-        title: "禁断のエロプレイあり",
+        title: "大阪まとめページレッツゴー",
         copy: "雰囲気、口コミ、記事の見どころを短く整理。行く前の比較に使いやすい一本。",
-        url: wakustTopUrl
+        url: "https://wakust.com/post_tag/?tag=45686&cate=331",
+        cta: "体験談の詳細を見る"
+      },
+      {
+        area: "大阪",
+        thumbLabel: "兵庫",
+        thumbText: "今日の候補に入れたい人気記事",
+        title: "難波周辺で予約前にチェックされている体験談",
+        copy: "アクセスしやすい難波周辺から、読みやすさと注目度で選んだ記事を掲載。",
+        url: "https://wakust.com/taisei1114/sample-osaka-02/",
+        cta: "大阪の人気記事を見る"
+      },
+      {
+        area: "関西",
+        thumbLabel: "京都",
+        thumbText: "AV女優在籍から探す夜遊び情報",
+        title: "AV女優在籍情報から記事を探したい人向けまとめ",
+        copy: "在籍、出勤、体験談をあわせて確認したい人向けに、入口になる情報を整理。",
+        url: "https://wakust.com/taisei1114/sample-kansai-03/",
+        cta: "在籍記事をチェック"
+      }
+    ];
+
+    /*
+      メンズエステ最新記事の編集場所です。
+      風俗最新記事と同じく、画像枠全体がクリックできるボタンです。
+      - thumbLabel: 画像枠内の地域ラベル
+      - url: 遷移先URL
+      - title / cta: 管理用の名前。画面には表示されません。
+    */
+    const mensEstheArticles = [
+      {
+        area: "大阪",
+        thumbLabel: "大阪",
+        title: "大阪メンズエステ最新記事",
+        url: "https://wakust.com/taisei1114/sample-mens-esthe-osaka/",
+        cta: "大阪のメンズエステ記事を見る"
       },
       {
         area: "兵庫",
         thumbLabel: "兵庫",
-        thumbText: "大阪最新記事",
-        title: "美女と濃厚プレイ",
-        copy: "アクセスしやすい難波周辺から、読みやすさと注目度で選んだ記事を掲載。",
-        url: wakustTopUrl
+        title: "兵庫メンズエステ最新記事",
+        url: "https://wakust.com/taisei1114/sample-mens-esthe-hyogo/",
+        cta: "兵庫のメンズエステ記事を見る"
       },
       {
         area: "京都",
         thumbLabel: "京都",
-        thumbText: "エロの無双ここにあり",
-        title: "イキたい人必見情報盛りだくさん",
-        copy: "在籍、出勤、体験談をあわせて確認したい人向けに、入口になる情報を整理。",
-        url: wakustTopUrl
+        title: "京都メンズエステ最新記事",
+        url: "https://wakust.com/taisei1114/sample-mens-esthe-kyoto/",
+        cta: "京都のメンズエステ記事を見る"
       }
     ];
 
-    const todaySchedules = {
-      "大阪": [
-        { name: "梨花 / りんか", shop: "Muteki Platinum", time: "12:00 - 20:00", hook: "記事閲覧数上昇中" },
-        { name: "白雪 / しらゆき", shop: "Muteki Platinum", time: "14:00 - 22:00", hook: "口コミ注目" },
-        { name: "皐月 / さつき", shop: "Muteki Platinum", time: "18:00 - 01:00", hook: "夜枠人気" }
-      ],
-      "兵庫": [
-        { name: "三宮みなみ", shop: "三宮エリア店", time: "13:00 - 21:00", hook: "新人で話題" },
-        { name: "元町れい", shop: "元町エリア店", time: "16:00 - 23:00", hook: "予約残りわずか" }
-      ],
-      "京都": [
-        { name: "河原町ゆい", shop: "河原町エリア店", time: "12:00 - 19:00", hook: "SNSで人気" },
-        { name: "京都さら", shop: "京都駅周辺店", time: "17:00 - 00:00", hook: "リピート率高" }
-      ]
-    };
-
-    const actressNews = [
-      { name: "一ノ瀬まりん", shop: "大阪エリア店", area: "大阪", url: wakustTopUrl },
-      { name: "七瀬ひかり", shop: "日本橋エリア店", area: "大阪", url: wakustTopUrl },
-      { name: "白石りお", shop: "三宮エリア店", area: "兵庫", url: wakustTopUrl },
-      { name: "桜木みれい", shop: "京都エリア店", area: "京都", url: wakustTopUrl }
+    /*
+      AV女優在籍記事ランキングの編集場所です。
+      - rank: 順位
+      - imageUrl: 左側に表示する画像URL
+      - title: 記事タイトル
+      - copy: 短い紹介文
+      - url: ワクストの個別記事URL
+      - cta: ボタン文言
+    */
+    const actressRankingArticles = [
+      {
+        rank: 1,
+        imageUrl: "assets/images/actress-ranking-1.jpg",
+        title: "大阪で注目されているAV女優在籍記事",
+        copy: "在籍情報と体験談をまとめて確認したい人向けの人気記事。",
+        url: "https://wakust.com/taisei1114/sample-actress-ranking-01/"
+      },
+      {
+        rank: 2,
+        imageUrl: "assets/images/actress-ranking-2.jpg",
+        title: "難波周辺でチェックされている在籍まとめ",
+        copy: "予約前に比較しやすいよう、見どころを短く整理。",
+        url: "https://wakust.com/taisei1114/sample-actress-ranking-02/"
+      },
+      {
+        rank: 3,
+        imageUrl: "assets/images/actress-ranking-3.jpg",
+        title: "兵庫エリアの在籍情報ピックアップ",
+        copy: "三宮周辺で探している人向けの入口記事。",
+        url: "https://wakust.com/taisei1114/sample-actress-ranking-03/"
+      },
+      {
+        rank: 4,
+        imageUrl: "assets/images/actress-ranking-4.jpg",
+        title: "京都で話題の在籍情報まとめ",
+        copy: "京都エリアの気になる在籍情報を記事から確認。",
+        url: "https://wakust.com/taisei1114/sample-actress-ranking-04/"
+      },
+      {
+        rank: 5,
+        imageUrl: "assets/images/actress-ranking-5.jpg",
+        title: "関西で今読まれているAV女優在籍記事",
+        copy: "大阪・兵庫・京都を横断して探したい人向け。",
+        url: "https://wakust.com/taisei1114/sample-actress-ranking-05/"
+      }
     ];
 
     /*
@@ -748,14 +1148,18 @@
       ここから下は基本的に編集不要です。
     */
 
-    const regionGrid = document.querySelector("#region-grid");
+    const topSliderTrack = document.querySelector("#top-slider-track");
     const latestList = document.querySelector("#latest-list");
-    const scheduleTabs = document.querySelector("#schedule-tabs");
-    const scheduleList = document.querySelector("#schedule-list");
-    const actressList = document.querySelector("#actress-list");
+    const mensEstheList = document.querySelector("#mens-esthe-list");
+    const actressRankingList = document.querySelector("#actress-ranking-list");
+    const latestUpdated = document.querySelector("#latest-updated");
+    const mensEstheUpdated = document.querySelector("#mens-esthe-updated");
+    const actressRankingUpdated = document.querySelector("#actress-ranking-updated");
     const ageGate = document.querySelector("#age-gate");
     const ageYes = document.querySelector("#age-yes");
     const ageNo = document.querySelector("#age-no");
+    const ageStorageKey = "yoasobiKansaiAgeConfirmedAt";
+    const ageLimitMs = 24 * 60 * 60 * 1000;
 
     function escapeHtml(value) {
       return String(value)
@@ -766,86 +1170,64 @@
         .replaceAll("'", "&#039;");
     }
 
-    function renderRegions() {
-      regionGrid.innerHTML = regions.map((region) => `
-        <a class="region-button" href="${escapeHtml(region.target)}">${escapeHtml(region.name)}</a>
-      `).join("");
-    }
-
-    function renderLatest() {
-      latestList.innerHTML = latestArticles.map((item) => `
-        <a class="article-mini-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">
+    function renderArticleButtons(target, articles) {
+      target.innerHTML = articles.map((item) => `
+        <a class="article-mini-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener" aria-label="${escapeHtml(item.cta || item.title)}">
           <div class="article-thumb">
             <span class="article-thumb-label">${escapeHtml(item.thumbLabel || item.area)}</span>
-            <p class="article-thumb-title">${escapeHtml(item.thumbText || item.title)}</p>
-          </div>
-          <div class="article-mini-body">
-            <p class="article-category">記事</p>
-            <h3 class="article-mini-title">${escapeHtml(item.title)}</h3>
           </div>
         </a>
       `).join("");
     }
 
-    function renderScheduleTabs(activeArea) {
-      scheduleTabs.innerHTML = Object.keys(todaySchedules).map((area) => `
-        <button class="tab-button ${area === activeArea ? "active" : ""}" type="button" data-area="${escapeHtml(area)}">${escapeHtml(area)}</button>
+    function renderTopSlider() {
+      const sliderItems = [...topSliderArticles, ...topSliderArticles];
+      topSliderTrack.innerHTML = sliderItems.map((item) => `
+        <a class="slider-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener" aria-label="${escapeHtml(item.title)}">
+          <div class="slider-image" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.22)), url('${escapeHtml(item.imageUrl)}'), linear-gradient(135deg, #ff1688, #ff75bd 58%, #fff04f);"></div>
+          <div class="slider-body">
+            <p class="slider-title">${escapeHtml(item.title)}</p>
+          </div>
+        </a>
       `).join("");
     }
 
-    function renderSchedule(area) {
-      renderScheduleTabs(area);
-      scheduleList.innerHTML = todaySchedules[area].map((item) => `
-        <article class="info-row">
-          <div class="info-top">
-            <span class="info-name">${escapeHtml(item.name)}</span>
-            <span class="badge">${escapeHtml(item.hook)}</span>
+    function renderActressRanking() {
+      actressRankingList.innerHTML = actressRankingArticles.map((item) => `
+        <article class="ranking-card">
+          <a class="ranking-image" href="${escapeHtml(item.url)}" target="_blank" rel="noopener" aria-label="${escapeHtml(item.title)}" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.35)), url('${escapeHtml(item.imageUrl)}'), linear-gradient(135deg, #ff1688, #ff75bd 58%, #fff04f);">
+          </a>
+          <div class="ranking-body">
+            <span class="rank-number">第${escapeHtml(item.rank)}位</span>
+            <h3 class="ranking-title">${escapeHtml(item.title)}</h3>
+            <p class="ranking-copy">${escapeHtml(item.copy)}</p>
           </div>
-          <p class="meta">${escapeHtml(item.shop)}</p>
-          <p class="copy">${escapeHtml(item.time)}</p>
-          <a class="button" href="${wakustTopUrl}" target="_blank" rel="noopener">関連する記事を見る</a>
         </article>
       `).join("");
     }
 
-    function renderActressNews() {
-      actressList.innerHTML = actressNews.map((item) => `
-        <a class="article-mini-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">
-          <div class="article-thumb">
-            <span class="article-thumb-label">${escapeHtml(item.area)}</span>
-            <p class="article-thumb-title">${escapeHtml(item.name)}</p>
-          </div>
-          <div class="article-mini-body">
-            <p class="article-category">AV女優在籍</p>
-            <h3 class="article-mini-title">${escapeHtml(item.shop)}</h3>
-          </div>
-        </a>
-      `).join("");
+    function isAgeConfirmed() {
+      const confirmedAt = Number(localStorage.getItem(ageStorageKey));
+      if (!confirmedAt) return false;
+      return Date.now() - confirmedAt < ageLimitMs;
     }
 
-    scheduleTabs.addEventListener("click", (event) => {
-      const button = event.target.closest("[data-area]");
-      if (!button) return;
-      renderSchedule(button.dataset.area);
-    });
-
     function setupAgeGate() {
-      const agreed = localStorage.getItem("yoasobiKansaiAgeConfirmed") === "yes";
-      if (!agreed) {
+      if (!isAgeConfirmed()) {
         ageGate.classList.add("show");
       }
 
       ageYes.addEventListener("click", () => {
-        localStorage.setItem("yoasobiKansaiAgeConfirmed", "yes");
+        localStorage.setItem(ageStorageKey, String(Date.now()));
         ageGate.classList.remove("show");
       });
 
       ageNo.addEventListener("click", () => {
         document.body.innerHTML = `
-          <main style="min-height:100vh;display:grid;place-items:center;padding:24px;background:#fff1f8;color:#171117;font-family:system-ui,sans-serif;text-align:center;">
+          <main style="min-height:100vh;display:grid;place-items:center;padding:24px;background:#09050b;color:#f7edf4;font-family:system-ui,sans-serif;text-align:center;">
             <section>
               <h1 style="margin:0 0 10px;font-size:24px;">閲覧できません</h1>
-              <p style="margin:0;color:#75636d;font-weight:700;">18歳未満の方はこのページを閲覧できません。</p>
+              <p style="margin:0;color:#c8aeba;font-weight:700;">18歳未満の方はこのページを閲覧できません。</p>
             </section>
           </main>
         `;
@@ -853,10 +1235,13 @@
     }
 
     setupAgeGate();
-    renderRegions();
-    renderLatest();
-    renderSchedule("大阪");
-    renderActressNews();
+    latestUpdated.textContent = `最終更新日：${lastUpdated}`;
+    mensEstheUpdated.textContent = `最終更新日：${lastUpdated}`;
+    actressRankingUpdated.textContent = `最終更新日：${lastUpdated}`;
+    renderTopSlider();
+    renderActressRanking();
+    renderArticleButtons(latestList, latestArticles);
+    renderArticleButtons(mensEstheList, mensEstheArticles);
   </script>
 </body>
 </html>
