@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YOASOBI関西navi｜関西の風俗・メンズエステ・体験記事情報</title>
-  <meta name="description" content="YOASOBI関西naviは、関西の夜の情報を体験談を通して日々配信するまとめLPです。AV女優在籍記事ランキング、風俗最新記事、メンズエステ最新記事からワクスト記事へ誘導します。" />
+  <title>YOASOBI_nabi｜関西の風俗・メンズエステ・体験記事情報</title>
+  <meta name="description" content="YOASOBI_nabiは、関西の夜の情報を体験談を通して日々配信するまとめLPです。AV女優在籍記事ランキング、風俗最新記事、メンズエステ最新記事からワクスト記事へ誘導します。" />
   <link rel="canonical" href="https://taisei1114.github.io/osaka-lp/" />
-  <meta property="og:title" content="YOASOBI関西navi｜関西の風俗・メンズエステ・体験記事情報" />
+  <meta property="og:title" content="YOASOBI_nabi｜関西の風俗・メンズエステ・体験記事情報" />
   <meta property="og:description" content="関西の夜の情報を体験談を通して日々配信中。AV女優在籍記事ランキング、風俗最新記事、メンズエステ最新記事をまとめてチェック。" />
   <!-- SNS共有画像は後から assets/images/ogp.jpg をアップロードして差し替えてください -->
   <meta property="og:image" content="https://taisei1114.github.io/osaka-lp/assets/images/ogp.jpg" />
@@ -16,7 +16,7 @@
   <style>
     /*
       =========================================================
-      YOASOBI関西navi LP
+      YOASOBI_nabi LP
       =========================================================
       - GitHub Pagesにそのまま置ける index.html 1ファイル構成
       - スマホ縦表示を優先
@@ -97,34 +97,14 @@
       min-width: 0;
     }
 
-    .logo-mini {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 2px 6px;
-      color: #171117;
-      background: var(--gold);
-      font-size: 11px;
-      line-height: 1;
-      font-weight: 950;
-    }
-
     .site-name {
       display: block;
-      margin-top: 5px;
       color: #fff;
       font-size: 24px;
       line-height: 0.95;
       font-weight: 950;
       letter-spacing: 0;
       text-shadow: 0 2px 12px rgba(255, 22, 136, 0.55);
-    }
-
-    .site-sub {
-      margin: 5px 0 0;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
     }
 
     .header-actions {
@@ -242,9 +222,43 @@
       padding: 4px 8px;
       border-radius: 999px;
       color: var(--black);
-      background: var(--yellow);
+      background: linear-gradient(90deg, var(--gold), var(--gold-2));
       font-size: 11px;
       font-weight: 950;
+    }
+
+    .hero-notice {
+      margin-top: 13px;
+      padding: 10px;
+      border: 1px solid rgba(216, 180, 106, 0.34);
+      border-radius: 7px;
+      background: rgba(0, 0, 0, 0.34);
+      color: #f7edf4;
+    }
+
+    .hero-notice-title {
+      margin: 0 0 6px;
+      color: var(--gold-2);
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 950;
+    }
+
+    .hero-notice ul {
+      margin: 0;
+      padding-left: 17px;
+    }
+
+    .hero-notice li {
+      margin: 0 0 3px;
+      color: #eadde5;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 750;
+    }
+
+    .hero-notice li:last-child {
+      margin-bottom: 0;
     }
 
     .filter-band {
@@ -323,6 +337,8 @@
 
     .slider-image {
       min-height: 124px;
+      border: 3px solid rgba(216, 180, 106, 0.82);
+      border-radius: 6px 6px 0 0;
       background:
         linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.22)),
         linear-gradient(135deg, #ff1688, #ff75bd 58%, #fff04f);
@@ -548,6 +564,8 @@
       display: grid;
       align-content: space-between;
       padding: 10px;
+      border: 3px solid rgba(216, 180, 106, 0.82);
+      border-radius: 6px 6px 0 0;
       color: #fff;
       background:
         linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.72)),
@@ -633,7 +651,6 @@
 
     .ranking-card {
       display: grid;
-      grid-template-columns: 112px minmax(0, 1fr);
       overflow: hidden;
       border: 1px solid rgba(216, 180, 106, 0.25);
       border-radius: var(--radius);
@@ -642,7 +659,8 @@
     }
 
     .ranking-image {
-      min-height: 132px;
+      min-height: 180px;
+      aspect-ratio: 16 / 9;
       position: relative;
       background:
         linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.35)),
@@ -661,7 +679,7 @@
       border-radius: 999px;
       color: #fff;
       background: linear-gradient(90deg, #171117, #8e064f 58%, #d8b46a);
-      font-size: 13px;
+      font-size: 19px;
       font-weight: 950;
       text-align: center;
       line-height: 1;
@@ -670,13 +688,13 @@
 
     .ranking-body {
       min-width: 0;
-      padding: 10px;
+      padding: 12px 12px 10px;
     }
 
     .ranking-title {
       margin: 0 0 6px;
       color: #fff;
-      font-size: 15px;
+      font-size: 17px;
       line-height: 1.35;
       font-weight: 950;
     }
@@ -923,7 +941,17 @@
       }
 
       .ranking-card {
-        grid-template-columns: 150px minmax(0, 1fr);
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .ranking-card {
+        grid-template-columns: 1fr;
+      }
+
+      .ranking-image {
+        min-height: 170px;
       }
     }
 
@@ -975,15 +1003,13 @@
     <header class="top-header">
       <div class="top-header-inner">
         <div class="logo-block">
-          <span class="logo-mini">KANSAI NIGHT REPORT</span>
-          <span class="site-name">YOASOBI関西navi</span>
-          <p class="site-sub">関西の夜の情報を体験談を通して日々配信中</p>
+          <span class="site-name">YOASOBI_nabi</span>
         </div>
         <div class="header-actions" aria-label="補助メニュー">
-          <a class="header-button" href="#latest">最新記事</a>
+          <a class="header-button" href="#actress-ranking">AV女優在籍記事ランキング</a>
         </div>
       </div>
-      <div class="breadcrumb">YOASOBI関西navi ＞ 体験談まとめ</div>
+      <div class="breadcrumb">YOASOBI_nabi ＞ 体験談まとめ</div>
     </header>
 
     <main>
@@ -991,17 +1017,25 @@
         <div class="hero-card">
           <span class="hero-kicker">EXPERIENCE REPORT</span>
           <h1 id="hero-title">体験談まとめ</h1>
-          <p class="hero-lead">関西の夜遊び情報を、読みやすい記事導線でチェック</p>
+          <p class="hero-lead">大人のムフフな体験談を随時更新中!!</p>
           <div class="hero-tags" aria-label="掲載ジャンル">
             <span class="hero-tag">AV女優在籍</span>
             <span class="hero-tag">風俗記事</span>
             <span class="hero-tag">メンズエステ</span>
           </div>
+          <div class="hero-notice" aria-label="ご利用前に">
+            <p class="hero-notice-title">ご利用前に</p>
+            <ul>
+              <li>掲載内容は個人的な感想や独自調査に基づくものです。</li>
+              <li>最新の出勤情報、料金、在籍状況は各公式ページをご確認ください。</li>
+              <li>記事ご購入後のクレームは退店時以外は受け付けておりません。</li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <section class="top-slider" aria-label="注目記事スライダー">
-        <h2 class="top-slider-heading"><span>注目記事</span>を横にチェック</h2>
+        <h2 class="top-slider-heading">注目の最新記事はこちら</h2>
         <div class="slider-window">
           <div id="top-slider-track" class="slider-track"></div>
         </div>
@@ -1038,19 +1072,11 @@
           <div id="mens-esthe-list" class="horizontal-strip"></div>
         </section>
 
-        <section class="section" aria-labelledby="notice-title">
-          <h2 id="notice-title" class="section-title">ご利用前に</h2>
-          <div class="card notice">
-            <p>掲載内容は個人的な感想や独自調査に基づくものです。</p>
-            <p>最新の出勤情報、料金、在籍状況は各公式ページをご確認ください。</p>
-            <p>このLPは興味づけと比較を目的にした入口ページです。詳細は各記事および公式情報をご確認ください。</p>
-          </div>
-        </section>
       </div>
     </main>
 
     <footer class="footer">
-      YOASOBI関西navi / Kansai Experience Report
+      YOASOBI_nabi / Kansai Experience Report
     </footer>
   </div>
 
@@ -1095,6 +1121,31 @@
         imageUrl: "https://wakust.com/wp-content/uploads/2026/05/890354-1024x576.jpg",
         title: "激美乳AV女優と濃厚SEX、顔面騎乗位で唾液たっぷりクンニ",
         url: "https://wakust.com/taisei1114/1721627/"
+      },
+      {
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/05/160944-1024x576.jpg",
+        title: "こんな美少女AV女優が在籍していいの？",
+        url: "https://wakust.com/taisei1114/1720072/"
+      },
+      {
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/05/958543-1024x576.jpg",
+        title: "ドSギャルに120分犯されました",
+        url: "https://wakust.com/taisei1114/1719328/"
+      },
+      {
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/05/591135-1024x576.jpg",
+        title: "スペック高いのにまさかの中出しOK",
+        url: "https://wakust.com/taisei1114/1719345/"
+      },
+      {
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/06/246959-1024x576.jpg",
+        title: "お姉さん系、S級美女は選べるHR嬢でした!",
+        url: "https://wakust.com/taisei1114/1737816/"
+      },
+      {
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/06/675924-1024x576.jpg",
+        title: "小柄で可愛い。思わずリピートしたくなる癒し系セラピスト",
+        url: "https://wakust.com/taisei1114/1737820/"
       }
     ];
 
@@ -1110,9 +1161,9 @@
     */
     const latestArticles = [
       {
-        area: "大阪",
-        thumbLabel: "大阪",
-        imageUrl: "assets/images/fuzoku-osaka.jpg",
+        area: "関東",
+        thumbLabel: "関東",
+        imageUrl: "assets/images/fuzoku-kanto.jpg",
         thumbText: "予約前に読まれている体験談",
         title: "大阪まとめページレッツゴー",
         copy: "雰囲気、口コミ、記事の見どころを短く整理。行く前の比較に使いやすい一本。",
@@ -1120,9 +1171,9 @@
         cta: "体験談の詳細を見る"
       },
       {
-        area: "大阪",
-        thumbLabel: "兵庫",
-        imageUrl: "assets/images/fuzoku-hyogo.jpg",
+        area: "関西",
+        thumbLabel: "関西",
+        imageUrl: "assets/images/fuzoku-kansai.jpg",
         thumbText: "今日の候補に入れたい人気記事",
         title: "難波周辺で予約前にチェックされている体験談",
         copy: "アクセスしやすい難波周辺から、読みやすさと注目度で選んだ記事を掲載。",
@@ -1130,9 +1181,9 @@
         cta: "大阪の人気記事を見る"
       },
       {
-        area: "関西",
-        thumbLabel: "京都",
-        imageUrl: "assets/images/fuzoku-kyoto.jpg",
+        area: "愛知",
+        thumbLabel: "愛知",
+        imageUrl: "assets/images/fuzoku-aichi.jpg",
         thumbText: "AV女優在籍から探す夜遊び情報",
         title: "AV女優在籍情報から記事を探したい人向けまとめ",
         copy: "在籍、出勤、体験談をあわせて確認したい人向けに、入口になる情報を整理。",
@@ -1151,26 +1202,26 @@
     */
     const mensEstheArticles = [
       {
-        area: "大阪",
-        thumbLabel: "大阪",
-        imageUrl: "assets/images/mens-esthe-osaka.jpg",
-        title: "大阪メンズエステ最新記事",
+        area: "関東",
+        thumbLabel: "関東",
+        imageUrl: "assets/images/mens-esthe-kanto.jpg",
+        title: "関東メンズエステ最新記事",
         url: "https://wakust.com/taisei1114/sample-mens-esthe-osaka/",
         cta: "大阪のメンズエステ記事を見る"
       },
       {
-        area: "兵庫",
-        thumbLabel: "兵庫",
-        imageUrl: "assets/images/mens-esthe-hyogo.jpg",
-        title: "兵庫メンズエステ最新記事",
+        area: "関西",
+        thumbLabel: "関西",
+        imageUrl: "assets/images/mens-esthe-kansai.jpg",
+        title: "関西メンズエステ最新記事",
         url: "https://wakust.com/taisei1114/sample-mens-esthe-hyogo/",
         cta: "兵庫のメンズエステ記事を見る"
       },
       {
-        area: "京都",
-        thumbLabel: "京都",
-        imageUrl: "assets/images/mens-esthe-kyoto.jpg",
-        title: "京都メンズエステ最新記事",
+        area: "愛知",
+        thumbLabel: "愛知",
+        imageUrl: "assets/images/mens-esthe-aichi.jpg",
+        title: "愛知メンズエステ最新記事",
         url: "https://wakust.com/taisei1114/sample-mens-esthe-kyoto/",
         cta: "京都のメンズエステ記事を見る"
       }
@@ -1188,38 +1239,38 @@
     const actressRankingArticles = [
       {
         rank: 1,
-        imageUrl: "assets/images/actress-ranking-1.jpg",
-        title: "大阪で注目されているAV女優在籍記事",
-        copy: "在籍情報と体験談をまとめて確認したい人向けの人気記事。",
-        url: "https://wakust.com/taisei1114/sample-actress-ranking-01/"
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/05/160944-1024x576.jpg",
+        title: "こんな美少女AV女優が在籍していいの？",
+        copy: "",
+        url: "https://wakust.com/taisei1114/1720072/"
       },
       {
         rank: 2,
-        imageUrl: "assets/images/actress-ranking-2.jpg",
-        title: "難波周辺でチェックされている在籍まとめ",
-        copy: "予約前に比較しやすいよう、見どころを短く整理。",
-        url: "https://wakust.com/taisei1114/sample-actress-ranking-02/"
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/05/198320-1024x576.jpg",
+        title: "作品数100越えのAV女優　ロリ×清楚好きにはたっまらない",
+        copy: "",
+        url: "https://wakust.com/taisei1114/1722900/"
       },
       {
         rank: 3,
-        imageUrl: "assets/images/actress-ranking-3.jpg",
-        title: "兵庫エリアの在籍情報ピックアップ",
-        copy: "三宮周辺で探している人向けの入口記事。",
-        url: "https://wakust.com/taisei1114/sample-actress-ranking-03/"
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/05/507854-1024x576.jpg",
+        title: "2回戦必須120分のAV女優との戯れ",
+        copy: "",
+        url: "https://wakust.com/taisei1114/1719351/"
       },
       {
         rank: 4,
-        imageUrl: "assets/images/actress-ranking-4.jpg",
-        title: "京都で話題の在籍情報まとめ",
-        copy: "京都エリアの気になる在籍情報を記事から確認。",
-        url: "https://wakust.com/taisei1114/sample-actress-ranking-04/"
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/05/890354-1024x576.jpg",
+        title: "激美乳AV女優と濃厚SEX、顔面騎乗位で唾液たっぷりクンニ",
+        copy: "",
+        url: "https://wakust.com/taisei1114/1721627/"
       },
       {
         rank: 5,
-        imageUrl: "assets/images/actress-ranking-5.jpg",
-        title: "関西で今読まれているAV女優在籍記事",
-        copy: "大阪・兵庫・京都を横断して探したい人向け。",
-        url: "https://wakust.com/taisei1114/sample-actress-ranking-05/"
+        imageUrl: "https://wakust.com/wp-content/uploads/2026/05/444768-1024x576.jpg",
+        title: "目線がマジエロ! お姉さんAV女優とパコパコ",
+        copy: "",
+        url: "https://wakust.com/taisei1114/1721122/"
       }
     ];
 
@@ -1271,16 +1322,21 @@
       `).join("");
     }
 
+    function formatRank(rank) {
+      const labels = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+      return `第${labels[rank] || rank}位`;
+    }
+
     function renderActressRanking() {
       actressRankingList.innerHTML = actressRankingArticles.map((item) => `
         <article class="ranking-card">
+          <div class="ranking-body">
+            <span class="rank-number">${escapeHtml(formatRank(item.rank))}</span>
+            <h3 class="ranking-title">${escapeHtml(item.title)}</h3>
+            ${item.copy ? `<p class="ranking-copy">${escapeHtml(item.copy)}</p>` : ""}
+          </div>
           <a class="ranking-image" href="${escapeHtml(item.url)}" target="_blank" rel="noopener" aria-label="${escapeHtml(item.title)}" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.35)), url('${escapeHtml(item.imageUrl)}'), linear-gradient(135deg, #ff1688, #ff75bd 58%, #fff04f);">
           </a>
-          <div class="ranking-body">
-            <span class="rank-number">第${escapeHtml(item.rank)}位</span>
-            <h3 class="ranking-title">${escapeHtml(item.title)}</h3>
-            <p class="ranking-copy">${escapeHtml(item.copy)}</p>
-          </div>
         </article>
       `).join("");
     }
