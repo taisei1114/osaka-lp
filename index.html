@@ -288,7 +288,14 @@
     }
 
     .slider-window {
-      overflow: hidden;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .slider-window::-webkit-scrollbar {
+      display: none;
     }
 
     .slider-track {
@@ -391,6 +398,62 @@
       border: 0;
     }
 
+    .side-affiliate {
+      position: fixed;
+      top: 128px;
+      z-index: 20;
+      width: 300px;
+      display: none;
+    }
+
+    .side-affiliate.left {
+      left: calc(50% - 380px - 320px);
+    }
+
+    .side-affiliate.right {
+      right: calc(50% - 380px - 320px);
+    }
+
+    .side-ad-box {
+      padding: 8px;
+      border: 1px solid rgba(216, 180, 106, 0.28);
+      border-radius: 8px;
+      background: #151018;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
+      text-align: center;
+    }
+
+    .side-ad-box iframe {
+      display: block;
+      width: 300px;
+      max-width: 100%;
+      height: 250px;
+      border: 0;
+    }
+
+    .side-ad-box img {
+      display: block;
+      width: 300px;
+      max-width: 100%;
+      height: auto;
+      border: 0;
+    }
+
+    .side-ad-text {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    @media (min-width: 1400px) {
+      .side-affiliate {
+        display: block;
+      }
+    }
+
     @keyframes slideArticles {
       from {
         transform: translateX(0);
@@ -432,13 +495,6 @@
       line-height: 1;
       font-weight: 950;
       letter-spacing: 0;
-    }
-
-    .section-note {
-      margin: -3px 0 10px;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
     }
 
     .updated-date {
@@ -871,6 +927,14 @@
       }
     }
 
+    @media (max-width: 719px) {
+      .slider-track {
+        animation: none;
+        width: max-content;
+        padding-bottom: 2px;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .slider-track {
         animation: none;
@@ -891,6 +955,21 @@
       </div>
     </div>
   </div>
+
+  <aside class="side-affiliate left" aria-label="左側広告">
+    <div class="side-ad-box">
+      <iframe src="https://gallerieshub.com/index11.html?affid=232970" width="300" height="250" frameborder="no" scrolling="no" title="左側広告"></iframe>
+    </div>
+  </aside>
+
+  <aside class="side-affiliate right" aria-label="右側広告">
+    <div class="side-ad-box">
+      <a href="https://clear-tv.com/Click2/1018004-18-232970" target="_blank" rel="noopener">
+        <img src="https://pixelarchivenow.com/image/1pondo/sm/1456001.jpg" alt="広告" />
+        <span class="side-ad-text">かわいい女性や綺麗な女性が、本気でSEXする姿を無修正で。</span>
+      </a>
+    </div>
+  </aside>
 
   <div class="page">
     <header class="top-header">
@@ -946,19 +1025,16 @@
       <div class="content">
         <section id="actress-ranking" class="section" aria-labelledby="actress-ranking-title">
           <h2 id="actress-ranking-title" class="section-title">AV女優在籍記事ランキング</h2>
-          <p class="section-note">注目度の高い在籍記事を5位まで掲載。<span id="actress-ranking-updated" class="updated-date"></span></p>
           <div id="actress-ranking-list" class="ranking-list"></div>
         </section>
 
         <section id="latest" class="section" aria-labelledby="latest-title">
           <h2 id="latest-title" class="section-title">風俗地域まとめ</h2>
-          <p class="section-note">SNSから来た人が最初に見る入口です。<span id="latest-updated" class="updated-date"></span></p>
           <div id="latest-list" class="horizontal-strip"></div>
         </section>
 
         <section id="mens-esthe" class="section" aria-labelledby="mens-esthe-title">
           <h2 id="mens-esthe-title" class="section-title">メンエス地域まとめ</h2>
-          <p class="section-note">気になる地域のメンズエステ記事をチェック。<span id="mens-esthe-updated" class="updated-date"></span></p>
           <div id="mens-esthe-list" class="horizontal-strip"></div>
         </section>
 
@@ -986,8 +1062,6 @@
       ここを書き換えるだけで、表示内容を変更できます。
       将来GASやCSVから自動更新する場合も、この配列を置き換える形にすると管理しやすいです。
     */
-
-    const lastUpdated = "2026年6月12日";
 
     /*
       横スクロール画像スライダーの編集場所です。
@@ -1028,6 +1102,7 @@
       最新記事の編集場所です。
       - area: 地域
       - thumbLabel: サムネ上の小さいラベル
+      - imageUrl: カード背景に表示する画像URL
       - thumbText: サムネ内の大きい文言
       - title: 記事タイトル
       - copy: 短い説明文
@@ -1037,6 +1112,7 @@
       {
         area: "大阪",
         thumbLabel: "大阪",
+        imageUrl: "assets/images/fuzoku-osaka.jpg",
         thumbText: "予約前に読まれている体験談",
         title: "大阪まとめページレッツゴー",
         copy: "雰囲気、口コミ、記事の見どころを短く整理。行く前の比較に使いやすい一本。",
@@ -1046,6 +1122,7 @@
       {
         area: "大阪",
         thumbLabel: "兵庫",
+        imageUrl: "assets/images/fuzoku-hyogo.jpg",
         thumbText: "今日の候補に入れたい人気記事",
         title: "難波周辺で予約前にチェックされている体験談",
         copy: "アクセスしやすい難波周辺から、読みやすさと注目度で選んだ記事を掲載。",
@@ -1055,6 +1132,7 @@
       {
         area: "関西",
         thumbLabel: "京都",
+        imageUrl: "assets/images/fuzoku-kyoto.jpg",
         thumbText: "AV女優在籍から探す夜遊び情報",
         title: "AV女優在籍情報から記事を探したい人向けまとめ",
         copy: "在籍、出勤、体験談をあわせて確認したい人向けに、入口になる情報を整理。",
@@ -1067,6 +1145,7 @@
       メンズエステ最新記事の編集場所です。
       風俗最新記事と同じく、画像枠全体がクリックできるボタンです。
       - thumbLabel: 画像枠内の地域ラベル
+      - imageUrl: カード背景に表示する画像URL
       - url: 遷移先URL
       - title / cta: 管理用の名前。画面には表示されません。
     */
@@ -1074,6 +1153,7 @@
       {
         area: "大阪",
         thumbLabel: "大阪",
+        imageUrl: "assets/images/mens-esthe-osaka.jpg",
         title: "大阪メンズエステ最新記事",
         url: "https://wakust.com/taisei1114/sample-mens-esthe-osaka/",
         cta: "大阪のメンズエステ記事を見る"
@@ -1081,6 +1161,7 @@
       {
         area: "兵庫",
         thumbLabel: "兵庫",
+        imageUrl: "assets/images/mens-esthe-hyogo.jpg",
         title: "兵庫メンズエステ最新記事",
         url: "https://wakust.com/taisei1114/sample-mens-esthe-hyogo/",
         cta: "兵庫のメンズエステ記事を見る"
@@ -1088,6 +1169,7 @@
       {
         area: "京都",
         thumbLabel: "京都",
+        imageUrl: "assets/images/mens-esthe-kyoto.jpg",
         title: "京都メンズエステ最新記事",
         url: "https://wakust.com/taisei1114/sample-mens-esthe-kyoto/",
         cta: "京都のメンズエステ記事を見る"
@@ -1152,9 +1234,6 @@
     const latestList = document.querySelector("#latest-list");
     const mensEstheList = document.querySelector("#mens-esthe-list");
     const actressRankingList = document.querySelector("#actress-ranking-list");
-    const latestUpdated = document.querySelector("#latest-updated");
-    const mensEstheUpdated = document.querySelector("#mens-esthe-updated");
-    const actressRankingUpdated = document.querySelector("#actress-ranking-updated");
     const ageGate = document.querySelector("#age-gate");
     const ageYes = document.querySelector("#age-yes");
     const ageNo = document.querySelector("#age-no");
@@ -1173,7 +1252,7 @@
     function renderArticleButtons(target, articles) {
       target.innerHTML = articles.map((item) => `
         <a class="article-mini-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener" aria-label="${escapeHtml(item.cta || item.title)}">
-          <div class="article-thumb">
+          <div class="article-thumb" style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.72)), url('${escapeHtml(item.imageUrl || "")}'), linear-gradient(135deg, #ff1688, #ff75bd 58%, #fff04f);">
             <span class="article-thumb-label">${escapeHtml(item.thumbLabel || item.area)}</span>
           </div>
         </a>
@@ -1235,9 +1314,6 @@
     }
 
     setupAgeGate();
-    latestUpdated.textContent = `最終更新日：${lastUpdated}`;
-    mensEstheUpdated.textContent = `最終更新日：${lastUpdated}`;
-    actressRankingUpdated.textContent = `最終更新日：${lastUpdated}`;
     renderTopSlider();
     renderActressRanking();
     renderArticleButtons(latestList, latestArticles);
